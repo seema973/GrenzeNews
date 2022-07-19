@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Initially it was made in class-based component then converted to functional-based component
 
 ## Available Scripts
 
