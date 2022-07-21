@@ -1,10 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 
-export class NewsItem extends Component {
-  render() {
+const NewsItem = (props) => {
     // Destructuring in JS - means this.props is an object and title and descriptions anre pulled from this.props and make available
-    let { title, description, imageUrl, newsUrl, author, date, source } =
-      this.props;
+    let { title, description, imageUrl, newsUrl, author, date, source } = props;
     return (
       <div className="my-3">
         <div className="card" >
@@ -29,8 +27,8 @@ export class NewsItem extends Component {
           />
           <div className="card-body">
             <h5 className="card-title">{title}</h5>
-            <p class="card-text">
-              <small class="text-muted">
+            <p className="card-text">
+              <small className="text-muted">
                 By {!author ? "unknown" : author} on{" "}
                 {new Date(date).toGMTString()}
               </small>
@@ -43,7 +41,6 @@ export class NewsItem extends Component {
         </div>
       </div>
     );
-  }
-}
+ }
 
 export default NewsItem;
